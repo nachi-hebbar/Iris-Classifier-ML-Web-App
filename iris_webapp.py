@@ -32,7 +32,7 @@ def main():
     inputs=[[sl,sw,pl,pw]]
     if st.button('Classify'):
         if option=='Linear Regression':
-            (classist.successfy((lin_model.predict(inputs))))
+            st.success(classify(lin_model.predict(inputs)))
         elif option=='Logistic Regression':
             st.success(classify(log_model.predict(inputs)))
         else:
