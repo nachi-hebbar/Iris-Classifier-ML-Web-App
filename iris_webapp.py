@@ -5,7 +5,7 @@ import pickle
 
 lin_model=pickle.load(open('lin_model.pkl','rb'))
 log_model=pickle.load(open('log_model.pkl','rb'))
-svc_model=pickle.load(open('svc_model.pkl','rb'))
+svm=pickle.load(open('svm.pkl','rb'))
 
 def classify(num):
     if num<0.5:
@@ -36,7 +36,7 @@ def main():
         elif option=='Logistic Regression':
             st.success(classify(log_model.predict(inputs)))
         else:
-           st.success(classify(svc_model.predict(inputs)))
+           st.success(classify(svm.predict(inputs)))
 
 
 if __name__=='__main__':
